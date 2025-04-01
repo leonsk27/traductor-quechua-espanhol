@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "463333547610",
+    "project_id": "app-translate-quechua-v1",
+    "storage_bucket": "app-translate-quechua-v1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463333547610:android:f7f3c7cf9adcb0edfb8263",
+        "android_client_info": {
+          "package_name": "com.example.trans_quechua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463333547610-7e8c58qu6jt9cjih5vh04alj6aiktabs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQBYjTWXgYs2zHPBgjx5mr-TmE6wTUrPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463333547610-7e8c58qu6jt9cjih5vh04alj6aiktabs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "463333547610-np736aecschm5v3opp3pb34orn843u6r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.transQuechua"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
