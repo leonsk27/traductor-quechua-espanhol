@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 Widget buildTranslateButton({
   required IconData icon,
   required String text,
-  required Color color,
+  required Color colorBack,
+  required Color colorFont,
   required VoidCallback onTap,
 }) {
   return ElevatedButton.icon(
     style: ElevatedButton.styleFrom(
-      backgroundColor: color,
-      foregroundColor: Colors.white,
+      backgroundColor: colorBack,
+      foregroundColor: colorFont,
       padding: EdgeInsets.symmetric(vertical: 14, horizontal: 20),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     ),

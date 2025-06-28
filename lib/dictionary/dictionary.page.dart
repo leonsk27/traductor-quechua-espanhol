@@ -11,6 +11,8 @@ class _DictionaryPageState extends State<DictionaryPage> {
   bool isQuechuaToSpanish = true;
   Map<String, String> quechuaToSpanish = {};
   Map<String, String> spanishToQuechua = {};
+  String searchQuery = '';
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -32,38 +34,73 @@ class _DictionaryPageState extends State<DictionaryPage> {
         spanishToQuechua = Map<String, String>.from(json.decode(espanolJson));
       });
 
-      print(
-        "✅ Diccionarios cargados: Q→E ${quechuaToSpanish.length}, E→Q ${spanishToQuechua.length}",
-      );
+      print("✅ Diccionarios cargados");
     } catch (e) {
       print("❌ Error al cargar diccionarios: $e");
     }
   }
 
+  Map<String, String> getFilteredDictionary() {
+    final dictionary = isQuechuaToSpanish ? quechuaToSpanish : spanishToQuechua;
+    if (searchQuery.isEmpty) return dictionary;
+
+    return Map.fromEntries(
+      dictionary.entries.where(
+        (entry) => entry.key.toLowerCase().contains(searchQuery.toLowerCase()),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final currentDictionary =
-        isQuechuaToSpanish ? quechuaToSpanish : spanishToQuechua;
+    final currentDictionary = getFilteredDictionary();
 
     return Scaffold(
       appBar: AppBar(title: Text("Diccionario"), centerTitle: true),
-      body:
-          currentDictionary.isEmpty
-              ? Center(child: CircularProgressIndicator())
-              : ListView.builder(
-                itemCount: currentDictionary.length,
-                itemBuilder: (context, index) {
-                  String key = currentDictionary.keys.elementAt(index);
-                  String value = currentDictionary[key]!;
-                  return ListTile(
-                    title: Text(
-                      key,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(value),
-                  );
-                },
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _searchController,
+              decoration: InputDecoration(
+                hintText:
+                    isQuechuaToSpanish
+                        ? 'Buscar en quechua o español...'
+                        : 'Buscar en español o quechua...',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
+              onChanged: (value) {
+                setState(() {
+                  searchQuery = value;
+                });
+              },
+            ),
+          ),
+          Expanded(
+            child:
+                currentDictionary.isEmpty
+                    ? Center(child: CircularProgressIndicator())
+                    : ListView.builder(
+                      itemCount: currentDictionary.length,
+                      itemBuilder: (context, index) {
+                        String key = currentDictionary.keys.elementAt(index);
+                        String value = currentDictionary[key]!;
+                        return ListTile(
+                          title: Text(
+                            key,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Text(value),
+                        );
+                      },
+                    ),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -72,6 +109,8 @@ class _DictionaryPageState extends State<DictionaryPage> {
               onPressed: () {
                 setState(() {
                   isQuechuaToSpanish = true;
+                  searchQuery = '';
+                  _searchController.clear();
                 });
               },
               child: Text("Quechua → Español"),
@@ -83,6 +122,8 @@ class _DictionaryPageState extends State<DictionaryPage> {
               onPressed: () {
                 setState(() {
                   isQuechuaToSpanish = false;
+                  searchQuery = '';
+                  _searchController.clear();
                 });
               },
               child: Text("Español → Quechua"),

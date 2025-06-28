@@ -1,0 +1,28 @@
+[
+    {"lesson_id": 1, "title": "PARTES DEL CUERPO / RUNA UKHU", "image": "assets/lessons/lesson_1.jpg",
+        "content": [
+            { "description": "Cabeza / Uma", "image": "assets/lessons/lesson_1_1.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Mano / Maki", "image": "assets/lessons/lesson_1_2.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Ojo Ñawi", "image": "assets/lessons/lesson_1_3.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Pie / Chaki", "image": "assets/lessons/lesson_1_4.jpg", "sound_quechua": "", "sound_espanol": "" }
+            ]
+        },
+    {"lesson_id": 2, "title": "COLORES / TULLPUKUNA", "image": "assets/lessons/lesson_2.png",
+        "content": [
+            { "description": "Blanco / Yuraq", "image": "assets/lessons/lesson_2_1.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Rojo / Puka", "image": "assets/lessons/lesson_2_2.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Negro / Yana", "image": "assets/lessons/lesson_2_3.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Rosa / Qhaqra puka", "image": "assets/lessons/lesson_2_4.jpg"}
+            ]
+        },
+    {"lesson_id": 2, "title": "ANIMALES / UYWAKUNA", "image": "assets/lessons/lesson_3.png",
+        "content": [
+            { "description": "Araña / Kusi kusi", "image": "assets/lessons/lesson_3_1.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Ave / Pisqu", "image": "assets/lessons/lesson_3_2.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Llama / Qarwa - llama", "image": "assets/lessons/lesson_3_3.jpg", "sound_quechua": "", "sound_espanol": "" }, 
+            { "description": "Oveja / Uwija", "image": "assets/lessons/lesson_3_4.jpg"},
+            { "description": "Gato / Misi", "image": "assets/lessons/lesson_3_5.jpg", "sound_quechua": "", "sound_espanol": "" },
+            { "description": "Perro / Alqu", "image": "assets/lessons/lesson_3_6.jpg", "sound_quechua": "", "sound_espanol": "" }
+            ]
+        }
+]
