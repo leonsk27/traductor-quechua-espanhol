@@ -4,7 +4,6 @@ import 'package:trans_quechua/auth/login.screen.dart';
 import 'package:trans_quechua/dictionary/dictionary.page.dart';
 import 'package:trans_quechua/home/welcome.page.dart';
 import 'package:trans_quechua/translations/translate.page.dart';
-import 'package:trans_quechua/lessons/lessons.page.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
     WelcomePage(),
     TranslatePage(),
     DictionaryPage(),
-    LessonsPage(),
   ];
 
   void _onItemTapped(int index) {
