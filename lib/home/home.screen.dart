@@ -58,26 +58,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Bienvenida'),
-              onTap: () => _onItemTapped(0),
-            ),
+            // ListTile(
+            //   leading: Icon(Icons.home),
+            //   title: Text('Bienvenida'),
+            //   onTap: () => _onItemTapped(0),
+            // ),
             ListTile(
               leading: Icon(Icons.translate),
               title: Text('Traducir'),
               onTap: () => _onItemTapped(1),
             ),
-            ListTile(
-              leading: Icon(Icons.book),
-              title: Text('Diccionario'),
-              onTap: () => _onItemTapped(2),
-            ),
-            ListTile(
-              leading: Icon(Icons.help),
-              title: Text('Lecciones'),
-              onTap: () => _onItemTapped(3),
-            ),
+            // ListTile(
+            //   leading: Icon(Icons.book),
+            //   title: Text('Diccionario'),
+            //   onTap: () => _onItemTapped(2),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.help),
+            //   title: Text('Lecciones'),
+            //   onTap: () => _onItemTapped(3),
+            // ),
             Divider(),
             ListTile(
               leading: Icon(Icons.exit_to_app, color: Colors.red),

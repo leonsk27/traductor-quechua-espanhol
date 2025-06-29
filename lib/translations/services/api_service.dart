@@ -5,7 +5,7 @@ import 'package:path_provider/path_provider.dart';
 
 class ApiService {
   static const String baseUrl =
-      "https://quechua-spanish-api-148750046645.southamerica-east1.run.app";
+      "https://translate-quechua-api-148750046645.us-central1.run.app";
   // "http://192.168.0.105:8080";
 
   // POST: Texto → Audio Quechua o Español
