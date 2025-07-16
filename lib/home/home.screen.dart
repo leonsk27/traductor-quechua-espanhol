@@ -4,6 +4,7 @@ import 'package:trans_quechua/auth/login.screen.dart';
 import 'package:trans_quechua/dictionary/dictionary.page.dart';
 import 'package:trans_quechua/home/welcome.page.dart';
 import 'package:trans_quechua/translations/translate.page.dart';
+import 'package:trans_quechua/lessons/lessons.page.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     WelcomePage(),
     TranslatePage(),
     DictionaryPage(),
+    LessonsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -56,26 +58,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            // ListTile(
-            //   leading: Icon(Icons.home),
-            //   title: Text('Bienvenida'),
-            //   onTap: () => _onItemTapped(0),
-            // ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Bienvenida'),
+              onTap: () => _onItemTapped(0),
+            ),
             ListTile(
               leading: Icon(Icons.translate),
               title: Text('Traducir'),
               onTap: () => _onItemTapped(1),
             ),
-            // ListTile(
-            //   leading: Icon(Icons.book),
-            //   title: Text('Diccionario'),
-            //   onTap: () => _onItemTapped(2),
-            // ),
-            // ListTile(
-            //   leading: Icon(Icons.help),
-            //   title: Text('Lecciones'),
-            //   onTap: () => _onItemTapped(3),
-            // ),
+            ListTile(
+              leading: Icon(Icons.book),
+              title: Text('Diccionario'),
+              onTap: () => _onItemTapped(2),
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text('Lecciones'),
+              onTap: () => _onItemTapped(3),
+            ),
             Divider(),
             ListTile(
               leading: Icon(Icons.exit_to_app, color: Colors.red),
